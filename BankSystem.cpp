@@ -9,9 +9,9 @@
 using namespace std;
 
 // Data
-void info(int[], int[], string[]);
-void newuser(int&, int[], int[], string[]);
-void returninguser(int&, int[], int[], string[]);
+void info		(int[], int[], string[]);
+void newuser		(int&, int[], int[], string[]);
+void returninguser	(int&, int[], int[], string[]);
 
 int socialsecurity(int&);
 
