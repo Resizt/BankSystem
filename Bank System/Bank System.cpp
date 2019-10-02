@@ -9,7 +9,7 @@
 using namespace std;
 
 // Data
-void info			(int[], int[], string[]);
+void info		(int[], int[], string[]);
 void newuser		(int&, int[], int[], string[]);
 void returninguser	(int&, int[], int[], string[]);
 
@@ -19,9 +19,9 @@ int socialsecurity	(int&);
 void database		(int&, int&, int&, string&);
 
 // Functions
-void menu			(int&, int&, int[], int[], string[]);
+void menu		(int&, int&, int[], int[], string[]);
 void accountlookup	(int&, int&, int[], int[], int&, string[]);
-void readin			(int&, int[], int[], string[]);
+void readin		(int&, int[], int[], string[]);
 void cleanup		(int[], int[]);
 void validator		(int&);
 void uservalidator	(int&);
