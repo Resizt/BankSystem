@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <string.h>
 #include <fstream>
 #include <cstdlib>
 #include <iomanip>
@@ -42,13 +43,25 @@ int main() {
 }
 
 void readin(int& userindatabase, int id[], int total[], string user[]) {
+	string line, line2;
 	ifstream readdatabase;
+	int pos, fix;
+
 	readdatabase.open("Database.txt");
 	if (!readdatabase) {
 		cout << "This machine is out of order" << endl;
 		exit(0);
 	}
+	while (getline(readdatabase, line)) {
+		cout << line << endl;
+		line2 = line.substr(0, line.find(" "));
+		fix = line2 - 0;
+		//line.(0, fix);
 
+		cout << "This is the fix " << endl;
+	}
+
+	readdatabase.close();
 }
 
 void menu(int& choice, int& useridnumber, int id[], int total[], string user[]) {
@@ -134,7 +147,7 @@ void info(int newid[], int total[], string newname[]) {
 void database(int& id, int& balance, int& total, string& name) {
 	ofstream storage;
 	storage.open("Database.txt");
-	storage << " Bank Number: " << id << "\n " << "Total Balance: " << balance << "\n " << "Account User Name: " << name << endl;
+	storage << "Bank Number: " << id << "\n " << "Total Balance: " << balance << "\n " << "Account User Name: " << name << endl;
 
 	storage.close();
 }
